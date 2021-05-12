@@ -6,7 +6,7 @@ from os import path
 from datetime import datetime
 
 
-links = {
+LINKS = {
     'alacritty.yml': '~/.config/alacritty/alacritty.yml',
     'emacs-daemon.service': '~/.config/systemd/user/emacs.service',
     'emacs-config.el': '~/.doom.d/config.el',
@@ -15,24 +15,26 @@ links = {
     'zshrc': '~/.zshrc',
 }
 
-linux_links = {
+LINUX_LINKS = {
     'settings.linux.json': '~/.config/Code - OSS/User/settings.json',
     'qtile-config.py': '~/.config/qtile/config.py',
 }
 
+CFG_DIR = path.dirname(path.abspath(__file__))
+
 
 def main():
-    for src, dest in links.items():
+    for src, dest in LINKS.items():
         symlink(src, dest)
 
     if sys.platform == 'linux':
-        for src, dest in linux_links.items():
+        for src, dest in LINUX_LINKS.items():
             symlink(src, dest)
 
 
 def symlink(src, dest):
     # Resolve the full path to the source file
-    src = path.abspath(src)
+    src = relative(src)
     # Resolve tilda (~) to the user's home directory
     dest = path.expanduser(dest)
     if path.islink(dest):
@@ -54,6 +56,10 @@ def make_dir_if_absent(filepath):
     make_dir_if_absent(parent)
     os.mkdir(parent)
     return True
+
+
+def relative(filepath):
+    return f'{CFG_DIR}/{filepath}'
 
 
 def backup(path):
