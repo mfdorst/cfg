@@ -16,7 +16,7 @@ LINKS = {
 }
 
 LINUX_LINKS = {
-    'settings.linux.json': '~/.config/Code - OSS/User/settings.json',
+    'vscode-settings-linux.json': '~/.config/Code - OSS/User/settings.json',
     'qtile-config.py': '~/.config/qtile/config.py',
 }
 
