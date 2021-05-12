@@ -8,12 +8,16 @@ from datetime import datetime
 
 links = {
     'alacritty.yml': '~/.config/alacritty/alacritty.yml',
+    'emacs-daemon.service': '~/.config/systemd/user/emacs.service',
+    'emacs-config.el': '~/.doom.d/config.el',
+    'emacs-init.el': '~/.doom.d/init.el',
     'gitconfig': '~/.gitconfig',
     'zshrc': '~/.zshrc',
 }
 
 linux_links = {
-    'settings.linux.json': '~/.config/Code - OSS/User/settings.json'
+    'settings.linux.json': '~/.config/Code - OSS/User/settings.json',
+    'qtile-config.py': '~/.config/qtile/config.py',
 }
 
 
@@ -36,8 +40,20 @@ def symlink(src, dest):
         os.remove(dest)
     if path.exists(dest):
         backup(dest)
+    else:
+        if make_dir_if_absent(dest):
+            print(f'Making directory {path.dirname(dest)}')
     print(f'Symlinking {src} -> {dest}')
     os.symlink(src, dest)
+
+
+def make_dir_if_absent(filepath):
+    parent = path.dirname(filepath)
+    if path.exists(parent):
+        return False
+    make_dir_if_absent(parent)
+    os.mkdir(parent)
+    return True
 
 
 def backup(path):
