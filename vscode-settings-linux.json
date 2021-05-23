@@ -6,6 +6,7 @@
         "<C-c>": false,
         "<C-v>": false,
         "<C-f>": false,
+        "<C-a>": false,
     },
     "editor.fontSize": 15,
     "editor.formatOnSave": true,
