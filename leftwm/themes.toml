@@ -4,6 +4,7 @@ name = "community"
 
 [[repos.themes]]
 name = "Orange Forest"
+directory = "/home/michael/.config/leftwm/themes/Orange Forest"
 repository = "https://github.com/PVautour/leftwm-theme-orange-forest/"
 commit = "*"
 version = "0.0.1"
@@ -12,14 +13,16 @@ current = false
 
 [[repos.themes]]
 name = "Coffee"
+directory = "/home/michael/.config/leftwm/themes/Coffee"
 repository = "https://github.com/lex148/leftwm-coffee/"
 commit = "*"
 version = "0.0.1"
 leftwm_versions = "*"
-current = false
+current = true
 
 [[repos.themes]]
 name = "Soothe"
+directory = "/home/michael/.config/leftwm/themes/Soothe"
 repository = "https://github.com/b4skyx/leftwm-soothe/"
 commit = "*"
 version = "0.0.1"
@@ -28,6 +31,7 @@ current = false
 
 [[repos.themes]]
 name = "TNG"
+directory = "/home/michael/.config/leftwm/themes/TNG"
 repository = "https://github.com/lex148/leftwm-tng/"
 commit = "*"
 version = "0.0.1"
@@ -49,14 +53,51 @@ repository = "https://github.com/AethanFoot/leftwm-theme-dracula-rounded/"
 commit = "*"
 version = "0.0.2"
 leftwm_versions = "^0.2.7"
-current = true
+current = false
 
 [[repos.themes]]
 name = "Forest"
+directory = "/home/michael/.config/leftwm/themes/Forest"
 repository = "https://github.com/lex148/forest/"
 commit = "*"
 version = "0.0.1"
 leftwm_versions = "*"
+current = false
+
+[[repos.themes]]
+name = "Ground Zero"
+directory = "/home/michael/.config/leftwm/themes/Ground Zero"
+repository = "https://github.com/Qwart376/Ground-Zero/"
+commit = "*"
+version = "0.0.1"
+leftwm_versions = "*"
+current = false
+
+[[repos.themes]]
+name = "Red Moon"
+directory = "/home/michael/.config/leftwm/themes/Red Moon"
+repository = "https://github.com/Qwart376/Red-Moon"
+commit = "*"
+version = "0.0.1"
+leftwm_versions = "*"
+current = false
+
+[[repos.themes]]
+name = "Blue Coffee"
+directory = "/home/michael/.config/leftwm/themes/Blue Coffee"
+repository = "https://github.com/Qwart376/Blue-Coffee/"
+commit = "*"
+version = "0.0.1"
+leftwm_versions = "*"
+current = false
+
+[[repos.themes]]
+name = "sunflower"
+directory = "/home/michael/.config/leftwm/themes/sunflower"
+repository = "https://github.com/mautamu/leftwm-sunflower/"
+commit = "*"
+version = "0.1.0"
+leftwm_versions = ">0.2.6"
 current = false
 
 [[repos]]

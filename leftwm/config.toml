@@ -16,7 +16,7 @@ layouts = [
     "RightWiderLeftStack",
     "LeftWiderRightStack",
 ]
-disable_current_tag_swap = false
+disable_current_tag_swap = true
 
 [[keybind]]
 command = "Execute"
