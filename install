@@ -18,6 +18,7 @@ LINKS = {
 LINUX_LINKS = {
     'vscode-settings-linux.json': '~/.config/Code - OSS/User/settings.json',
     'qtile-config.py': '~/.config/qtile/config.py',
+    'leftwm': '~/.config/leftwm',
 }
 
 CFG_DIR = path.dirname(path.abspath(__file__))
