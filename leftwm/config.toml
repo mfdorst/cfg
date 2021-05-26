@@ -3,18 +3,18 @@ mousekey = "Mod1"
 workspaces = []
 tags = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 layouts = [
-    "MainAndVertStack",
-    "MainAndHorizontalStack",
-    "MainAndDeck",
-    "GridHorizontal",
-    "EvenHorizontal",
-    "EvenVertical",
+    # "MainAndVertStack",
+    # "MainAndHorizontalStack",
+    # "MainAndDeck",
+    # "GridHorizontal",
+    # "EvenHorizontal",
+    # "EvenVertical",
     "Fibonacci",
-    "CenterMain",
-    "CenterMainBalanced",
+    # "CenterMain",
+    # "CenterMainBalanced",
     "Monocle",
-    "RightWiderLeftStack",
-    "LeftWiderRightStack",
+    # "RightWiderLeftStack",
+    # "LeftWiderRightStack",
 ]
 disable_current_tag_swap = true
 
@@ -89,8 +89,8 @@ key = "j"
 
 [[keybind]]
 command = "NextLayout"
-modifier = ["modkey", "Control"]
-key = "j"
+modifier = ["modkey", "Shift"]
+key = "m"
 
 [[keybind]]
 command = "PreviousLayout"
