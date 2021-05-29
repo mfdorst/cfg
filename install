@@ -7,7 +7,6 @@ from datetime import datetime
 
 
 LINKS = {
-    'alacritty.yml': ['~/.config/alacritty/alacritty.yml'],
     'emacs-daemon.service': ['~/.config/systemd/user/emacs.service'],
     'emacs-config.el': ['~/.doom.d/config.el'],
     'emacs-init.el': ['~/.doom.d/init.el'],
@@ -17,9 +16,14 @@ LINKS = {
 }
 
 LINUX_LINKS = {
+    'alacritty-linux.yml': ['~/.config/alacritty/alacritty.yml'],
     'vscode-settings-linux.json': ['~/.config/Code - OSS/User/settings.json'],
     'qtile-config.py': ['~/.config/qtile/config.py'],
     'leftwm': ['~/.config/leftwm'],
+}
+
+MACOS_LINKS = {
+    'alacritty-macos.yml': ['~/.config/alacritty/alacritty.yml'],
 }
 
 CFG_DIR = path.dirname(path.abspath(__file__))
@@ -36,6 +40,10 @@ def main():
 
     if sys.platform == 'linux':
         for src, dests in LINUX_LINKS.items():
+            for dest in dests:
+                symlink(src, dest)
+    elif sys.platform == 'darwin':
+        for src, dests in MACOS_LINKS.items():
             for dest in dests:
                 symlink(src, dest)
 
