@@ -6,5 +6,9 @@ wallpaper_dir="$HOME/Pictures/wallpapers"
 wallpaper_num=$(shuf -i 1-305 -n 1)
 wallpaper_path=$(printf "$wallpaper_dir/%.4d.jpg" $wallpaper_num)
 
+# Ensure that the $HOME/.local/share/wallpaper directory exists
+mkdir -p "$HOME/.local/share/wallpaper"
+echo $wallpaper_path >> "$HOME/.local/share/wallpaper/wallpaper.log"
+
 feh --bg-scale "$wallpaper_path"
 
