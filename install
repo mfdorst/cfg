@@ -2,35 +2,43 @@
 
 import os
 import sys
+from argparse import Namespace
 from os import path
 from datetime import datetime
 
 
 LINKS = {
-    'alacritty.yml': '~/.config/alacritty/alacritty.yml',
-    'emacs-daemon.service': '~/.config/systemd/user/emacs.service',
-    'emacs-config.el': '~/.doom.d/config.el',
-    'emacs-init.el': '~/.doom.d/init.el',
-    'gitconfig': '~/.gitconfig',
-    'zshrc': '~/.zshrc',
+    'alacritty.yml': ['~/.config/alacritty/alacritty.yml'],
+    'emacs-daemon.service': ['~/.config/systemd/user/emacs.service'],
+    'emacs-config.el': ['~/.doom.d/config.el'],
+    'emacs-init.el': ['~/.doom.d/init.el'],
+    'gitconfig': ['~/.gitconfig'],
+    'zshrc': ['~/.zshrc'],
+    'vimrc': ['~/.vimrc', '~/.config/nvim/init.vim']
 }
 
 LINUX_LINKS = {
-    'vscode-settings-linux.json': '~/.config/Code - OSS/User/settings.json',
-    'qtile-config.py': '~/.config/qtile/config.py',
-    'leftwm': '~/.config/leftwm',
+    'vscode-settings-linux.json': ['~/.config/Code - OSS/User/settings.json'],
+    'qtile-config.py': ['~/.config/qtile/config.py'],
+    'leftwm': ['~/.config/leftwm'],
 }
 
 CFG_DIR = path.dirname(path.abspath(__file__))
 
 
 def main():
-    for src, dest in LINKS.items():
-        symlink(src, dest)
+    if os.getuid() == 0:
+        print(Color.red, 'Do not run this script as root! Quitting.', Color.reset, sep='')
+        sys.exit(1)
+
+    for src, dests in LINKS.items():
+        for dest in dests:
+            symlink(src, dest)
 
     if sys.platform == 'linux':
-        for src, dest in LINUX_LINKS.items():
-            symlink(src, dest)
+        for src, dests in LINUX_LINKS.items():
+            for dest in dests:
+                symlink(src, dest)
 
 
 def symlink(src, dest):
@@ -39,14 +47,14 @@ def symlink(src, dest):
     # Resolve tilda (~) to the user's home directory
     dest = path.expanduser(dest)
     if path.islink(dest):
-        print(f'Unlinking {dest}')
+        print(Color.red, 'Unlinking', Color.reset, ' ', dest, sep='')
         os.remove(dest)
     if path.exists(dest):
         backup(dest)
     else:
         if make_dir_if_absent(dest):
-            print(f'Making directory {path.dirname(dest)}')
-    print(f'Symlinking {src} -> {dest}')
+            print(Color.green, 'Making directory ', Color.reset, path.dirname(dest), sep='')
+    print(Color.green, 'Symlinking ', Color.reset, src, Color.yellow, ' -> ', Color.reset, dest, sep='')
     os.symlink(src, dest)
 
 
@@ -65,8 +73,16 @@ def relative(filepath):
 
 def backup(path):
     backup_name = f'{path}.backup-{datetime.now().strftime("%Y-%M-%d-%H-%M-%S")}'
-    print(f'Backing up {path} -> {backup_name}')
+    print(Color.yellow, 'Backing up ', Color.reset, path, Color.yellow, ' -> ', Color.reset, backup_name, sep='')
     os.rename(path, backup_name)
+
+
+class Color:
+    reset = '\033[0m'
+    red = '\033[31m' 
+    green = '\033[32m'
+    yellow = '\033[33m'
+    blue = '\033[34m'
 
 
 if __name__ == '__main__':
