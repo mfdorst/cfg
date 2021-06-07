@@ -31,6 +31,18 @@ modifier = ["modkey", "Shift"]
 key = "Return"
 
 [[keybind]]
+command = "Execute"
+value = "volume-down"
+modifier = []
+key = "XF86XK_AudioLowerVolume"
+
+[[keybind]]
+command = "Execute"
+value = "volume-up"
+modifier = []
+key = "XF86XK_AudioRaiseVolume"
+
+[[keybind]]
 command = "CloseWindow"
 modifier = ["modkey", "Shift"]
 key = "c"
