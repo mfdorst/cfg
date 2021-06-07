@@ -108,6 +108,7 @@ alias cb='cargo build'
 alias cbr='cargo build --release'
 alias cr='cargo run'
 alias ct='cargo test'
+alias ccl='cargo clippy'
 
 # bat
 if command -v bat &> /dev/null; then
