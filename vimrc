@@ -40,6 +40,9 @@ Plug 'dag/vim-fish'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
+" RLS
+Plug 'rust-lang/rls'
+
 call plug#end()
 
 if has('nvim')
