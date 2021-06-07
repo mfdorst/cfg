@@ -8,6 +8,7 @@
         "<C-f>": false,
         "<C-a>": false,
     },
+    // "editor.multiCursorModifier": "ctrlCmd",
     "editor.fontSize": 15,
     "editor.formatOnSave": true,
     "terminal.integrated.shell.osx": "/bin/zsh",
