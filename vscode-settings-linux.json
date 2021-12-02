@@ -11,7 +11,8 @@
     // "editor.multiCursorModifier": "ctrlCmd",
     "editor.fontSize": 15,
     "editor.formatOnSave": true,
-    "terminal.integrated.shell.osx": "/bin/zsh",
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.defaultProfile.linux": "zsh",
     "editor.minimap.enabled": false,
     "editor.rulers": [
         100
@@ -37,4 +38,5 @@
     "C_Cpp.autoAddFileAssociations": false,
     "explorer.confirmDragAndDrop": false,
     "window.zoomLevel": 0,
+    "terminal.external.linuxExec": "alacritty",
 }
