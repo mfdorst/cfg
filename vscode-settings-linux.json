@@ -37,6 +37,5 @@
     "workbench.editor.limit.perEditorGroup": true,
     "C_Cpp.autoAddFileAssociations": false,
     "explorer.confirmDragAndDrop": false,
-    "window.zoomLevel": 0,
     "terminal.external.linuxExec": "alacritty",
 }
