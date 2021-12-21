@@ -102,6 +102,9 @@ else
     alias v='vim'
 fi
 
+# Sudoedit
+alias se='sudoedit'
+
 # Cargo
 alias c='cargo'
 alias cb='cargo build'
