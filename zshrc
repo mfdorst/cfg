@@ -265,3 +265,5 @@ export NVM_DIR="$HOME/.nvm"
 # This should stay at the very end.
 eval "$(starship init zsh)"
 
+neofetch
+
