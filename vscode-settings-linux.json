@@ -6,7 +6,7 @@
         "<C-c>": false,
         "<C-v>": false,
         "<C-f>": false,
-        "<C-a>": false,
+        "<C-a>": false
     },
     // "editor.multiCursorModifier": "ctrlCmd",
     "editor.fontSize": 15,
@@ -19,7 +19,7 @@
     ],
     "editor.tabSize": 4,
     "[c, c++]": {
-        "editor.defaultFormatter": "xaver.clang-format",
+        "editor.defaultFormatter": "xaver.clang-format"
     },
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -38,4 +38,5 @@
     "C_Cpp.autoAddFileAssociations": false,
     "explorer.confirmDragAndDrop": false,
     "terminal.external.linuxExec": "alacritty",
+    "tabnine.experimentalAutoImports": true
 }
