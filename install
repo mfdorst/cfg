@@ -17,7 +17,8 @@ LINKS = {
 
 LINUX_LINKS = {
     'alacritty-linux.yml': ['~/.config/alacritty/alacritty.yml'],
-    'vscode-settings-linux.json': ['~/.config/Code - OSS/User/settings.json'],
+    'vscode-settings-linux.json': ['~/.config/Code - OSS/User/settings.json', '~/.config/Code/User/settings.json'],
+    'vscode-keybindings-linux.json': ['~/.config/Code - OSS/User/keybindings.json', '~/.config/Code/User/keybindings.json'],
     'qtile-config.py': ['~/.config/qtile/config.py'],
     'leftwm': ['~/.config/leftwm'],
 }
