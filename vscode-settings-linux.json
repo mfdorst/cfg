@@ -38,5 +38,6 @@
     "C_Cpp.autoAddFileAssociations": false,
     "explorer.confirmDragAndDrop": false,
     "terminal.external.linuxExec": "alacritty",
-    "tabnine.experimentalAutoImports": true
+    "tabnine.experimentalAutoImports": true,
+    "rust-analyzer.inlayHints.enable": false
 }
