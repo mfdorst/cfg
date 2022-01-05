@@ -18,10 +18,16 @@ tool I created to quickly and easily generate all of the symlinks I want, in a f
 
 ## Installation with [`dotconfig`]
 
+Clone this repository into `~/.cfg`:
+```
+git clone git@github.com:mfdorst/cfg ~/.cfg
+```
+
 Install [`dotconfig`]:
 ```
 cargo install dotconfig
 ```
+
 Edit [`symlinks.yml`] to reflect your needs, then run
 ```
 dotconfig
