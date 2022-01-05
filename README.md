@@ -13,7 +13,7 @@ directory and I can commit the changes if I so choose. This also helps me keep m
 across different machines, and helps me get up and running quickly on a new OS install.
 
 Unfortunately on new systems it can be a pain to track down where each dotfile lives and make a
-symlink for it. Enter [***`dotconfig`!***][`dotconfig`] `dotconfig` is a
+symlink for it. Enter [***`dotconfig`!***][`dotconfig`] a
 tool I created to quickly and easily generate all of the symlinks I want, in a flexible way.
 
 ## Installation with [`dotconfig`]
