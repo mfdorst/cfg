@@ -35,5 +35,5 @@ dotconfig
 and all of your files will be symlinked!
 
 
-[`dotconfig`]: https://github.com/mfdorst/dotconfig
+[`dotconfig`]: https://crates.io/crates/dotconfig
 [`symlinks.yml`]: https://github.com/mfdorst/cfg/blob/master/symlinks.yml
