@@ -22,7 +22,7 @@ Install `dotconfig`:
 ```
 cargo install dotconfig
 ```
-Edit `symlinks.yml` to reflect your needs, then run
+Edit [`symlinks.yml`] to reflect your needs, then run
 ```
 dotconfig
 ```
@@ -30,3 +30,4 @@ and all of your files will be symlinked!
 
 
 [`dotconfig`]: https://github.com/mfdorst/dotconfig
+[`symlinks.yml`]: https://github.com/mfdorst/cfg/blob/master/symlinks.yml
