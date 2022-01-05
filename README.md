@@ -18,7 +18,7 @@ tool I created to quickly and easily generate all of the symlinks I want, in a f
 
 ## Installation with [`dotconfig`]
 
-Install `dotconfig`:
+Install [`dotconfig`]:
 ```
 cargo install dotconfig
 ```
