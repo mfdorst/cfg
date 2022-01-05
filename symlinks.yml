@@ -1,0 +1,41 @@
+links:
+  - link:
+    path: ~/.zshrc
+    origin: zshrc
+  - link:
+    path: ~/.gitconfig
+    origin: gitconfig
+  - link:
+    path: ~/.vimrc
+    origin: vimrc
+  - link:
+    path: ~/.config/alacritty/alacritty.yml
+    origin: alacritty-linux.yml
+    # origin: alacritty-macos.yml
+  - link:
+    path: ~/.config/Code/User/settings.json
+    origin: vscode-settings-linux.json
+  - link:
+    path: ~/.config/Code/User/keybindings.json
+    origin: vscode-keybindings-linux.json
+  - link:
+    path: ~/.config/Code - OSS/User/settings.json
+    origin: vscode-settings-linux.json
+  - link:
+    path: ~/.config/Code - OSS/User/keybindings.json
+    origin: vscode-keybindings-linux.json
+  # - link:
+  #   path: ~/.config/leftwm
+  #   origin: leftwm
+  # - link:
+  #   path: ~/.config/qtile/config.py
+  #   origin: qtile-config.py
+  # - link:
+  #   path: ~/.config/systemd/user/emacs.service
+  #   origin: emacs-daemon.service
+  # - link:
+  #   path: ~/.doom.d/config.el
+  #   origin: emacs-config.el
+  # - link:
+  #   path: ~/.doom.d/init.el
+  #   origin: emacs-init.el
