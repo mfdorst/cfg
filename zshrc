@@ -159,12 +159,12 @@ alias gp="git fetch --all --prune && git pull"
 alias gco="git checkout"
 
 # Stash
-alias gst="git add . && git stash"
+alias gst="git stash"
 
 # Reset
 alias gr="git reset"
 alias grh="git reset --hard"
-alias grah="git add . && git reset --hard"
+alias grah="git add -A && git reset --hard"
 
 # Branch
 alias gb="git branch"
@@ -176,11 +176,11 @@ alias gbdm='git branch --color=never --merged | grep -vE "\*|master" | xargs git
 
 # Commit
 alias gc="git commit"
-alias gca="git add . && git commit"
+alias gca="git add -A && git commit"
 
 # Add
 alias ga="git add"
-alias gaa="git add ."
+alias gaa="git add -A"
 
 # Diff
 alias gd="git diff"
