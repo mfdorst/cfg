@@ -32,7 +32,7 @@
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
     "editor.detectIndentation": false,
-    "workbench.editor.limit.value": 6,
+    "workbench.editor.limit.value": 8,
     "workbench.editor.limit.enabled": true,
     "workbench.editor.limit.perEditorGroup": true,
     "C_Cpp.autoAddFileAssociations": false,
