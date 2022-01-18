@@ -27,6 +27,9 @@ links:
   - link:
     path: ~/.config/Code - OSS/User/keybindings.json
     origin: vscode-keybindings-linux.json
+  - link:
+    path: ~/.config/libinput-gestures.conf
+    origin: libinput-gestures.conf
   # - link:
   #   path: ~/.config/leftwm
   #   origin: leftwm
