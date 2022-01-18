@@ -9,6 +9,9 @@ links:
     path: ~/.vimrc
     origin: vimrc
   - link:
+    path: ~/.config/nvim/init.vim
+    origin: vimrc
+  - link:
     path: ~/.config/alacritty/alacritty.yml
     origin: alacritty-linux.yml
     # origin: alacritty-macos.yml
