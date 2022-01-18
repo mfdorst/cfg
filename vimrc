@@ -12,4 +12,7 @@ set mouse=a
 
 set number relativenumber
 
+set cc=100
+
+highlight ColorColumn ctermbg=lightgrey
 
