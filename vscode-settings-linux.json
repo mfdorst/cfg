@@ -39,5 +39,7 @@
     "explorer.confirmDragAndDrop": false,
     "terminal.external.linuxExec": "alacritty",
     "tabnine.experimentalAutoImports": true,
-    "rust-analyzer.inlayHints.enable": false
+    "rust-analyzer.inlayHints.enable": false,
+    "workbench.colorTheme": "Sweet vscode",
+    "workbench.iconTheme": "material-icon-theme"
 }
