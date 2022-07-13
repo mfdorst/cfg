@@ -29,7 +29,7 @@
         "editor.formatOnSave": false
     },
     "workbench.startupEditor": "newUntitledFile",
-    "editor.fontFamily": "Fira Code",
+    "editor.fontFamily": "FiraCode Nerd Font",
     "editor.fontLigatures": true,
     "editor.detectIndentation": false,
     "workbench.editor.limit.value": 8,
@@ -40,6 +40,8 @@
     "terminal.external.linuxExec": "alacritty",
     "tabnine.experimentalAutoImports": true,
     "rust-analyzer.inlayHints.enable": false,
-    "workbench.colorTheme": "Sweet vscode",
-    "workbench.iconTheme": "material-icon-theme"
+    "workbench.colorTheme": "nushell",
+    "workbench.iconTheme": "material-icon-theme",
+    "explorer.confirmDelete": false,
+    "editor.inlayHints.enabled": false
 }
