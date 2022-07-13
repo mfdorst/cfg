@@ -1,5 +1,7 @@
 # Nushell Environment Config File
 
+let-env EDITOR = "nvim"
+
 def create_left_prompt [] {
     let path_segment = if (is-admin) {
         $"(ansi red_bold)($env.PWD)"
