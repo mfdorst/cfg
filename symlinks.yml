@@ -30,6 +30,12 @@ links:
   - link:
     path: ~/.config/libinput-gestures.conf
     origin: libinput-gestures.conf
+  - link:
+    path: ~/.config/nushell/config.nu
+    origin: config.nu
+  - link:
+    path: ~/.config/nushell/env.nu
+    origin: env.nu
   # - link:
   #   path: ~/.config/leftwm
   #   origin: leftwm
