@@ -2,6 +2,38 @@
 
 source ~/.oh-my-posh.nu
 
+# Cargo
+
+alias c = cargo
+alias cb = cargo build
+alias cbr = cargo build --release
+alias cr = cargo run
+alias crr = cargo run --release
+
+# Git
+
+alias g = git
+alias gs = git status -su
+alias ga = git add
+alias gaa = git add -A
+alias gc = git commit
+alias gco = git checkout
+alias gst = git stash
+alias gd = git diff
+alias gds = git diff --stat
+alias gl = git log --oneline --graph
+alias gla = git log --oneline --graph --branches --remotes --tags HEAD
+alias gll = git log --graph
+
+def gca [] {
+    git add -A
+    git commit
+}
+
+
+# Clear all scrollback
+alias cs = (clear ; printf '\e[3J')
+
 module completions {
   # Custom completions for external commands (those outside of Nushell)
   # Each completions has two parts: the form of the external command, including its flags and parameters
