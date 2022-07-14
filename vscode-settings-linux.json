@@ -11,8 +11,8 @@
     // "editor.multiCursorModifier": "ctrlCmd",
     "editor.fontSize": 15,
     "editor.formatOnSave": true,
-    "terminal.integrated.defaultProfile.osx": "zsh",
-    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.defaultProfile.osx": "nu",
+    "terminal.integrated.defaultProfile.linux": "nu",
     "editor.minimap.enabled": false,
     "editor.rulers": [
         100
@@ -43,5 +43,28 @@
     "workbench.colorTheme": "nushell",
     "workbench.iconTheme": "material-icon-theme",
     "explorer.confirmDelete": false,
-    "editor.inlayHints.enabled": false
+    "editor.inlayHints.enabled": false,
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
+        },
+        "zsh": {
+            "path": "zsh"
+        },
+        "fish": {
+            "path": "fish"
+        },
+        "tmux": {
+            "path": "tmux",
+            "icon": "terminal-tmux"
+        },
+        "pwsh": {
+            "path": "pwsh",
+            "icon": "terminal-powershell"
+        },
+        "nu": {
+            "path": "/usr/bin/nu"
+        }
+    }
 }
