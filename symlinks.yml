@@ -42,6 +42,12 @@ links:
   - link:
     path: ~/.config/i3/config
     origin: i3-config
+  - link:
+    path: ~/.oh-my-posh.nu
+    origin: oh-my-posh.nu
+  - link:
+    path: ~/.config/oh-my-posh/themes/gruvbox.toml
+    origin: oh-my-posh-theme-gruvbox.toml
   # - link:
   #   path: ~/.config/leftwm
   #   origin: leftwm
