@@ -21,12 +21,12 @@ links:
   - link:
     path: ~/.config/Code/User/keybindings.json
     origin: vscode-keybindings-linux.json
-  - link:
-    path: ~/.config/Code - OSS/User/settings.json
-    origin: vscode-settings-linux.json
-  - link:
-    path: ~/.config/Code - OSS/User/keybindings.json
-    origin: vscode-keybindings-linux.json
+#  - link:
+#    path: ~/.config/code - oss/user/settings.json
+#    origin: vscode-settings-linux.json
+#  - link:
+#    path: ~/.config/code - oss/user/keybindings.json
+#    origin: vscode-keybindings-linux.json
   - link:
     path: ~/.config/libinput-gestures.conf
     origin: libinput-gestures.conf
@@ -39,6 +39,9 @@ links:
   - link:
     path: ~/.config/polybar/config.ini
     origin: polybar.ini
+  - link:
+    path: ~/.config/i3/config
+    origin: i3-config
   # - link:
   #   path: ~/.config/leftwm
   #   origin: leftwm
