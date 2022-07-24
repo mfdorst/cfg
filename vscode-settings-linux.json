@@ -40,8 +40,8 @@
     "terminal.external.linuxExec": "alacritty",
     "tabnine.experimentalAutoImports": true,
     "rust-analyzer.inlayHints.enable": false,
-    "workbench.colorTheme": "nushell",
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Sweet vscode",
+    "workbench.iconTheme": "sweet-vscode-icons",
     "explorer.confirmDelete": false,
     "editor.inlayHints.enabled": false,
     "terminal.integrated.profiles.linux": {
