@@ -41,9 +41,20 @@ let mapleader = " "
 
 nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
 
+" Join lines
 nnoremap <C-j> <S-j>
+
+" Fast scrolling
 nnoremap <S-j> <C-d>
 nnoremap <S-k> <C-u>
 
+" Copy and paste to and from the system clipboard
+vnoremap <C-c> "+y
+vnoremap <C-v> "+p
+nnoremap <C-v> "+p
+inoremap <C-v> <Esc>"+pi
+
+" Escape to normal mode
 inoremap jj <Esc>
+
 
