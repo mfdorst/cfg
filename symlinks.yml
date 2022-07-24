@@ -36,6 +36,9 @@ links:
   - link:
     path: ~/.config/nushell/env.nu
     origin: env.nu
+  - link:
+    path: ~/.config/polybar/config.ini
+    origin: polybar.ini
   # - link:
   #   path: ~/.config/leftwm
   #   origin: leftwm
