@@ -5,12 +5,12 @@ links:
   - link:
     path: ~/.gitconfig
     origin: gitconfig
+#  - link:
+#    path: ~/.vimrc
+#    origin: vimrc
   - link:
-    path: ~/.vimrc
-    origin: vimrc
-  - link:
-    path: ~/.config/nvim/init.vim
-    origin: vimrc
+    path: ~/.config/nvim
+    origin: nvim
   - link:
     path: ~/.config/alacritty/alacritty.yml
     origin: alacritty-linux.yml
