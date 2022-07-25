@@ -24,5 +24,6 @@ return require('packer').startup(function(use)
     
     use 'nvim-telescope/telescope.nvim'
     use 'gruvbox-community/gruvbox'
+    use 'vim-airline/vim-airline'
 end)
 

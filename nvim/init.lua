@@ -1,4 +1,3 @@
-
 vim.o.tabstop = 4
 vim.o.softtabstop = 4
 vim.o.expandtab = true
@@ -54,6 +53,9 @@ require('plugins')
 
 vim.api.nvim_command('colorscheme gruvbox')
 
+vim.g.airline_powerline_fonts = 1
+
 -- Fuzzy find
 vim.api.nvim_set_keymap('n', '<leader>ff', '<cmd>Telescope find_files<cr>', { noremap = true })
+
 
