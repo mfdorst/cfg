@@ -18,12 +18,11 @@ return require('packer').startup(function(use)
   end
 
     use 'wbthomason/packer.nvim'
-    -- Dependencies for telescope
-    use 'nvim-lua/plenary.nvim'
-    use 'nvim-treesitter/nvim-treesitter'
+    requires = {{'nvim-lua/plenary.nvim', 'nvim-treesitter/nvim-treesitter'}}
     
     use 'nvim-telescope/telescope.nvim'
     use 'gruvbox-community/gruvbox'
     use 'vim-airline/vim-airline'
+    use 'airblade/vim-gitgutter'
 end)
 

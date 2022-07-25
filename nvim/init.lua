@@ -1,4 +1,5 @@
 vim.o.tabstop = 4
+vim.o.shiftwidth = 4
 vim.o.softtabstop = 4
 vim.o.expandtab = true
 vim.o.smartindent = true
@@ -58,4 +59,6 @@ vim.g.airline_powerline_fonts = 1
 -- Fuzzy find
 vim.api.nvim_set_keymap('n', '<leader>ff', '<cmd>Telescope find_files<cr>', { noremap = true })
 
+vim.g.gitgutter_enabled = 1
+vim.g.gitgutter_map_keys = 0
 
