@@ -30,16 +30,7 @@ set cmdheight=2
 " and poor user experience.
 set updatetime=50
 
-call plug#begin('~/.vim/plugged')
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'gruvbox-community/gruvbox'
-call plug#end()
-
-colorscheme gruvbox
-
 let mapleader = " "
-
-nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
 
 " Join lines
 nnoremap <C-j> <S-j>
@@ -57,4 +48,31 @@ inoremap <C-v> <Esc>"+pi
 " Escape to normal mode
 inoremap jj <Esc>
 
+call plug#begin('~/.vim/plugged')
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
+Plug 'gruvbox-community/gruvbox'
+call plug#end()
+
+colorscheme gruvbox
+
+" Fuzzy find
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+
+" Quit all
+nnoremap <leader>qq :confirm qall<cr>
+
+" Create windows
+nnoremap <leader>v <C-w>v
+nnoremap <leader>s <C-w>s
+
+" Close windows
+nnoremap <leader>w :confirm q<cr>
+
+" Move between windows
+nnoremap <leader>h <C-w>h
+nnoremap <leader>l <C-w>l
+nnoremap <leader>j <C-w>j
+nnoremap <leader>k <C-w>k
 
