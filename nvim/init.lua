@@ -38,7 +38,7 @@ vim.api.nvim_set_keymap('n', '<S-k>', '<C-u>', { noremap = true })
 vim.api.nvim_set_keymap('v', '<C-c>', '"+y', { noremap = true })
 vim.api.nvim_set_keymap('v', '<C-v>', '"+p', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-v>', '"+p', { noremap = true })
-vim.api.nvim_set_keymap('i', '<C-v>', '"+p', { noremap = true })
+vim.api.nvim_set_keymap('i', '<C-v>', '<esc>"+p', { noremap = true })
 
 -- Create windows
 vim.api.nvim_set_keymap('n', '<leader>v', '<C-w>v', { noremap = true })
@@ -62,3 +62,5 @@ vim.api.nvim_set_keymap('n', '<leader>ff', '<cmd>Telescope find_files<cr>', { no
 vim.g.gitgutter_enabled = 1
 vim.g.gitgutter_map_keys = 0
 
+-- Completions
+require('cmp')

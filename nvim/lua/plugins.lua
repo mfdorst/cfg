@@ -18,11 +18,16 @@ return require('packer').startup(function(use)
   end
 
     use 'wbthomason/packer.nvim'
-    requires = {{'nvim-lua/plenary.nvim', 'nvim-treesitter/nvim-treesitter'}}
-    
     use 'nvim-telescope/telescope.nvim'
+    requires = {'nvim-lua/plenary.nvim', 'nvim-treesitter/nvim-treesitter'}
+
     use 'gruvbox-community/gruvbox'
     use 'vim-airline/vim-airline'
     use 'airblade/vim-gitgutter'
+    use 'rust-lang/rust'
+    
+    -- cmp plugins
+    use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-buffer'
 end)
 
