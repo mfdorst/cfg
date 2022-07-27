@@ -58,6 +58,7 @@ return packer.startup(function(use)
 	use({ "lukas-reineke/indent-blankline.nvim", commit = "6177a59552e35dfb69e1493fd68194e673dc3ee2" })
 	use({ "goolord/alpha-nvim", commit = "ef27a59e5b4d7b1c2fe1950da3fe5b1c5f3b4c94" })
 	use("folke/which-key.nvim")
+    use({ "vim-airline/vim-airline", commit = "ad716f1df4f89589c0b13b9a39e68a10adba5e13" }) 
 
 	-- Colorschemes
     use({ "gruvbox-community/gruvbox", commit = "7e1b1bcab96149224738664a9ddd7cb1b3acf90a" })
