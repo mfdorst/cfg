@@ -24,18 +24,32 @@ vim.g.mapleader = " "
 -- Paste from system clipboard
 nmap("<C-v>", '"+p')
 
+-- Join lines
+nmap("<C-j>", "<S-j>")
+
 -- Navigate faster
 nmap("<S-j>", "<C-d>")
 nmap("<S-k>", "<C-u>")
 
+-- Add newlines without entering insert mode
+nmap("<CR>", "o<ESC>k")
+-- Note: mapping Shift+Return requires special treatment in most terminals.See https://stackoverflow.com/a/42461580/1291990
+nmap("<S-CR>", "O<ESC>j")
+
 -- Nvim-tree
 nmap("<leader>e", ":NvimTreeToggle<CR>")
 
+-- Quit
+nmap("<leader>q", ":confirm q<CR>")
+
+-- Open window below
+nmap("<leader>w", "<C-w>s")
+
 -- Better window navigation
-nmap("<C-h>", "<C-w>h")
-nmap("<C-j>", "<C-w>j")
-nmap("<C-k>", "<C-w>k")
-nmap("<C-l>", "<C-w>l")
+nmap("<leader>h", "<C-w>h")
+nmap("<leader>j", "<C-w>j")
+nmap("<leader>k", "<C-w>k")
+nmap("<leader>l", "<C-w>l")
 
 -- Resize with arrows
 nmap("<C-Up>", ":resize -2<CR>")
@@ -53,7 +67,7 @@ nmap("<S-h>", ":bprevious<CR>")
 
 -- Insert --
 -- Paste in insert mode
-imap("<C-v>", '<ESC>"+p')
+imap("<C-v>", '<ESC>"+p<ESC>')
  
 -- Press jk fast to exit insert mode 
 imap("jk", "<ESC>")
