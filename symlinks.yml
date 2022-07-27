@@ -48,6 +48,9 @@ links:
   - link:
     path: ~/.config/oh-my-posh/themes/gruvbox.toml
     origin: oh-my-posh-theme-gruvbox.toml
+  - link:
+    path: ~/.config/kitty/kitty.conf
+    origin: kitty.conf
   # - link:
   #   path: ~/.config/leftwm
   #   origin: leftwm
