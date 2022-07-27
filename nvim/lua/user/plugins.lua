@@ -60,6 +60,7 @@ return packer.startup(function(use)
 	use("folke/which-key.nvim")
 
 	-- Colorschemes
+    use({ "gruvbox-community/gruvbox", commit = "7e1b1bcab96149224738664a9ddd7cb1b3acf90a" })
 	use({ "folke/tokyonight.nvim", commit = "8223c970677e4d88c9b6b6d81bda23daf11062bb" })
 	use("lunarvim/darkplus.nvim")
 

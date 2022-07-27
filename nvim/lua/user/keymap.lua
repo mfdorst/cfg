@@ -28,6 +28,9 @@ nmap("<C-v>", '"+p')
 nmap("<S-j>", "<C-d>")
 nmap("<S-k>", "<C-u>")
 
+-- Nvim-tree
+nmap("<leader>e", ":NvimTreeToggle<CR>")
+
 -- Better window navigation
 nmap("<C-h>", "<C-w>h")
 nmap("<C-j>", "<C-w>j")
