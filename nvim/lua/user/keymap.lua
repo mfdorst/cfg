@@ -39,6 +39,12 @@ nmap("<S-CR>", "O<ESC>j")
 -- Nvim-tree
 nmap("<leader>e", ":NvimTreeToggle<CR>")
 
+-- Telescope
+nmap("<leader>ff", ":Telescope find_files<CR>")
+nmap("<leader>ft", ":Telescope live_grep<CR>")
+nmap("<leader>fp", ":Telescope projects<CR>")
+nmap("<leader>fb", ":Telescope buffers<CR>")
+
 -- Quit
 nmap("<leader>q", ":confirm q<CR>")
 
