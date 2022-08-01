@@ -60,10 +60,10 @@ default_border pixel 1
 hide_edge_borders both
 
 # Show desktop background
-exec_always --no-startup-id set-wallpaper
+exec_always --no-startup-id $HOME/scripts/set-wallpaper
 
 # Polybar
-exec_always --no-startup-id polybar-launch
+exec_always --no-startup-id $HOME/scripts/polybar-launch
 
 # kill focused window
 bindsym Mod1+w kill
