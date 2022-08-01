@@ -247,7 +247,7 @@ export PATH="$HOME/.pyenv/bin:$PATH"
 export PATH="$HOME/.emacs.d/bin:$PATH"
 
 # Custom scripts
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/scripts:$PATH"
 
 if command -v pyenv &> /dev/null; then
     eval "$(pyenv init -)"
