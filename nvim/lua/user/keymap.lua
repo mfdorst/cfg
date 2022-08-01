@@ -32,7 +32,8 @@ nmap("<S-j>", "<C-d>")
 nmap("<S-k>", "<C-u>")
 
 -- Add newlines without entering insert mode
-nmap("<CR>", "o<ESC>k")
+-- TODO: Find a way to do this without breaking the quickfix menu
+-- nmap("<CR>", "o<ESC>k")
 -- Note: mapping Shift+Return requires special treatment in most terminals.See https://stackoverflow.com/a/42461580/1291990
 nmap("<S-CR>", "O<ESC>j")
 
@@ -45,11 +46,21 @@ nmap("<leader>ft", ":Telescope live_grep<CR>")
 nmap("<leader>fp", ":Telescope projects<CR>")
 nmap("<leader>fb", ":Telescope buffers<CR>")
 
+-- Unhighlight search results
+nmap("<leader>n", ":nohlsearch<CR>")
+
+-- Write
+nmap("<leader>w", ":w<CR>")
+
 -- Quit
 nmap("<leader>q", ":confirm q<CR>")
+nmap("<leader>Q", ":confirm qall<CR>")
+
+-- Close the quickfix menu
+nmap("<leader>v", ":ccl<CR>")
 
 -- Open window below
-nmap("<leader>w", "<C-w>s")
+nmap("<leader>W", "<C-w>s")
 
 -- Better window navigation
 nmap("<leader>h", "<C-w>h")
