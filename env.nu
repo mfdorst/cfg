@@ -2,6 +2,9 @@
 
 let-env EDITOR = "nvim"
 
+# Zoxide
+zoxide init nushell --cmd j --hook prompt | save ~/.zoxide.nu
+
 def create_left_prompt [] {
     let path_segment = if (is-admin) {
         $"(ansi red_bold)($env.PWD)"
