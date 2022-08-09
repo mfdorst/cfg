@@ -33,12 +33,13 @@ type = "prompt"
   foreground = "p:white"
   powerline_symbol = ""
   style = "powerline"
-  template = "  {{ path .Path .Location }} "
+  template = " {{ .Path }} "
   type = "path"
 
     [blocks.segments.properties]
     home_icon = "~"
-    style = "folder"
+    folder_icon = ""
+    style = "unique"
 
   [[blocks.segments]]
   background = "p:aqua"
@@ -64,6 +65,14 @@ type = "prompt"
     fetch_status = true
     fetch_upstream_icon = true
     github_icon = ""
+
+  [[blocks.segments]]
+  type = "rust"
+  background = "p:red"
+  foreground = "p:white"
+  powerline_symbol = ""
+  style = "powerline"
+  template = " \ue7a8 {{ .Full }} "
 
   [[blocks.segments]]
   background = "p:yellow"
