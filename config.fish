@@ -31,6 +31,9 @@ if status is-interactive
     ## Other
     abbr -ag cls "clear; printf '\e[3J'"
 
+    # Environment Variables
+    set -x EDITOR nvim
+
     # Zoxide
     zoxide init fish --cmd cd | source
     
