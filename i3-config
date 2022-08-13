@@ -65,6 +65,9 @@ exec_always --no-startup-id $HOME/scripts/set-wallpaper
 # Polybar
 exec_always --no-startup-id $HOME/scripts/polybar-launch
 
+# Set key repeat delay and rate (default: 660, 25)
+exec_always --no-startup-id xset r rate 300 50
+
 # kill focused window
 bindsym Mod1+w kill
 bindsym Mod1+Shift+c kill
@@ -93,11 +96,11 @@ bindsym Mod1+Shift+Down move down
 bindsym Mod1+Shift+Up move up
 bindsym Mod1+Shift+Right move right
 
-# split in horizontal orientation
-bindsym Mod1+s split h
+# split vertically next
+bindsym Mod1+Shift+v split h
 
-# split in vertical orientation
-bindsym Mod1+v split v
+# split horizontally next
+bindsym Mod1+Shift+s split v
 
 # enter fullscreen mode for the focused container
 bindsym Mod1+f fullscreen toggle
@@ -138,6 +141,11 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+
+workspace $ws1 output DP-4
+workspace $ws2 output DP-4
+workspace $ws3 output HDMI-0
+workspace $ws4 output HDMI-0
 
 # switch to workspace
 bindsym Mod1+1 workspace number $ws1
