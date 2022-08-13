@@ -25,11 +25,7 @@ vim.g.mapleader = " "
 nmap("<C-v>", '"+p')
 
 -- Join lines
-nmap("<C-j>", "<S-j>")
-
--- Navigate faster
-nmap("<S-j>", "<C-d>")
-nmap("<S-k>", "<C-u>")
+nmap("<leader>j", "<S-j>")
 
 -- Add newlines without entering insert mode
 -- TODO: Find a way to do this without breaking the quickfix menu
@@ -63,10 +59,16 @@ nmap("<leader>v", ":ccl<CR>")
 nmap("<leader>W", "<C-w>s")
 
 -- Better window navigation
-nmap("<leader>h", "<C-w>h")
-nmap("<leader>j", "<C-w>j")
-nmap("<leader>k", "<C-w>k")
-nmap("<leader>l", "<C-w>l")
+nmap("<C-h>", "<C-w>h")
+nmap("<C-j>", "<C-w>j")
+nmap("<C-k>", "<C-w>k")
+nmap("<C-l>", "<C-w>l")
+
+-- Move lines up and down
+nmap("<S-j>", ":m+1<CR>==")
+nmap("<S-k>", ":m-2<CR>==")
+vmap("<S-j>", ":m '>+1<CR>gv=gv")
+vmap("<S-k>", ":m '<-2<CR>gv=gv")
 
 -- Resize with arrows
 nmap("<C-Up>", ":resize -2<CR>")
@@ -77,10 +79,6 @@ nmap("<C-Right>", ":vertical resize +2<CR>")
 -- Navigate buffers
 nmap("<S-l>", ":bnext<CR>")
 nmap("<S-h>", ":bprevious<CR>")
-
--- Move text up and down
--- nmap("<A-j>", "<Esc>:m .+1<CR>==gi")
--- nmap("<A-k>", "<Esc>:m .-2<CR>==gi")
 
 -- Insert --
 -- Paste in insert mode

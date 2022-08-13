@@ -1,6 +1,5 @@
 local options = {
     backup = false,                          -- creates a backup file
-    -- clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
     cmdheight = 2,                           -- more space in the neovim command line for displaying messages
     completeopt = { "menuone", "noselect" }, -- mostly just for cmp
     conceallevel = 0,                        -- so that `` is visible in markdown files
@@ -10,8 +9,8 @@ local options = {
     mouse = "a",                             -- allow the mouse to be used in neovim
     pumheight = 10,                          -- pop up menu height
     showmode = false,                        -- we don't need to see things like -- INSERT -- anymore
-    showtabline = 4,                         -- always show tabs
-    smartcase = true,                        -- smart case
+    showtabline = 0,                         -- always show tabs
+    smartcase = true,                        -- ignore case in searches unless an uppercase letter is used
     smartindent = true,                      -- make indenting smarter again
     splitbelow = true,                       -- force all horizontal splits to go below current window
     splitright = true,                       -- force all vertical splits to go to the right of current window
@@ -27,22 +26,22 @@ local options = {
     tabstop = 4,                             -- insert 2 spaces for a tab
     cursorline = true,                       -- highlight the current line
     number = true,                           -- set numbered lines
-    relativenumber = true,                  -- set relative numbered lines
+    relativenumber = true,                   -- set relative numbered lines
     numberwidth = 4,                         -- set number column width {default 4}
     signcolumn = "yes",                      -- always show the sign column, otherwise it would shift the text each time
     wrap = false,                            -- display lines as one long line
     scrolloff = 8,                           -- is one of my fav
     sidescrolloff = 8,
+    laststatus = 3,
     -- guifont = "monospace:h17",               -- the font used in graphical neovim applications
 }
 
+-- Allow h and l keys to wrap around to the previous/next line
+vim.opt.whichwrap:append("h,l")
+-- Make kabob-case keywords count as a single word for navigation purposes
+vim.opt.iskeyword:append("-")
 -- Don't show completion messages
 vim.opt.shortmess:append "c"
-
--- Allow h and l keys to wrap around to the previous/next line
-vim.cmd "set whichwrap+=h,l"
--- Make kabob-case keywords count as a single word for navigation purposes
-vim.cmd "set iskeyword+=-"
 
 for k, v in pairs(options) do
     vim.opt[k] = v
