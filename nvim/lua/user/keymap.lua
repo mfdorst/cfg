@@ -30,8 +30,11 @@ nmap("<leader>j", "<S-j>")
 -- Add newlines without entering insert mode
 -- TODO: Find a way to do this without breaking the quickfix menu
 -- nmap("<CR>", "o<ESC>k")
--- Note: mapping Shift+Return requires special treatment in most terminals.See https://stackoverflow.com/a/42461580/1291990
+-- Note: mapping Shift+Return requires special treatment in most terminals. See https://stackoverflow.com/a/42461580/1291990
 nmap("<S-CR>", "O<ESC>j")
+
+-- Undo
+nmap("R", "<C-r>")
 
 -- Nvim-tree
 nmap("<leader>e", ":NvimTreeToggle<CR>")
@@ -63,6 +66,10 @@ nmap("<C-h>", "<C-w>h")
 nmap("<C-j>", "<C-w>j")
 nmap("<C-k>", "<C-w>k")
 nmap("<C-l>", "<C-w>l")
+
+-- Close a buffer without closing the window
+-- Goes back one buffer, splits that buffer, goes forward (to the original buffer) and closes it, leaving you with the previous buffer open.
+nmap("<leader>x", ":bp<bar>sp<bar>bn<bar>bd<CR>")
 
 -- Move lines up and down
 nmap("<S-j>", ":m+1<CR>==")
