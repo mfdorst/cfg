@@ -53,7 +53,7 @@ floating_modifier Mod1
 bindsym Mod1+Return exec kitty
 
 # Rofi
-bindsym Mod1+space exec rofi -show run -theme gruvbox-dark-hard
+bindsym Mod1+p exec rofi -show run -theme gruvbox-dark-hard
 
 # Hide title bars
 default_border pixel 1
