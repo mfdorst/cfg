@@ -54,6 +54,9 @@ links:
   - link:
     path: ~/.config/fish/config.fish
     origin: config.fish
+  - link:
+    path: ~/.xmodmap
+    origin: xmodmap
   # - link:
   #   path: ~/.config/leftwm
   #   origin: leftwm

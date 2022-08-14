@@ -68,6 +68,9 @@ exec_always --no-startup-id $HOME/scripts/polybar-launch
 # Set key repeat delay and rate (default: 660, 25)
 exec_always --no-startup-id xset r rate 300 50
 
+# Use custom keymap
+exec_always --no-startup-id xmodmap $HOME/.xmodmap
+
 # kill focused window
 bindsym Mod1+w kill
 bindsym Mod1+Shift+c kill
