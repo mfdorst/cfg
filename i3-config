@@ -72,8 +72,7 @@ exec_always --no-startup-id xset r rate 300 50
 exec_always --no-startup-id xmodmap $HOME/.xmodmap
 
 # kill focused window
-bindsym Mod1+w kill
-bindsym Mod1+Shift+c kill
+bindsym Mod1+Shift+x kill
 
 # change focus
 bindsym Mod1+$left focus left
