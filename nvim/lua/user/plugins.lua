@@ -82,7 +82,8 @@ return packer.startup(function(use)
     use { "nvim-telescope/telescope.nvim", commit = "d96eaa914aab6cfc4adccb34af421bdd496468b0" }
 
     -- Treesitter
-    use { "nvim-treesitter/nvim-treesitter", commit = "518e27589c0463af15463c9d675c65e464efc2fe", }
+    use { "nvim-treesitter/nvim-treesitter", commit = "518e27589c0463af15463c9d675c65e464efc2fe" }
+    use { "nvim-treesitter/nvim-treesitter-context", commit = "8e88b67d0dc386d6ba1b3d09c206f19a50bc0625"}
 
     -- Git
     use { "lewis6991/gitsigns.nvim", commit = "c18e016864c92ecf9775abea1baaa161c28082c3" }

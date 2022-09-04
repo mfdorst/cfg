@@ -3,7 +3,7 @@ if not status_ok then
 	return
 end
 
-local lspconfig = require("lspconfig")
+local lspconfig = require "lspconfig"
 
 local servers = {
     "jsonls",

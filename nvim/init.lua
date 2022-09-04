@@ -22,4 +22,5 @@ require "user.project"
 require "user.telescope"
 require "user.toggleterm"
 require "user.treesitter"
+require "user.treesitter-context"
 
