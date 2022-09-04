@@ -45,6 +45,13 @@ nmap("<leader>ft", ":Telescope live_grep<CR>")
 nmap("<leader>fp", ":Telescope projects<CR>")
 nmap("<leader>fb", ":Telescope buffers<CR>")
 
+-- LSP
+nmap("<leader>rn", ":lua vim.lsp.buf.rename()<CR>")
+
+-- Rust
+-- Save and run `cargo fmt`
+nmap("<leader>rf", ":w<CR>:!cargo fmt<CR>")
+
 -- Unhighlight search results
 nmap("<leader>n", ":nohlsearch<CR>")
 
@@ -90,10 +97,13 @@ nmap("<S-h>", ":bprevious<CR>")
 -- Insert --
 -- Paste in insert mode
 imap("<C-v>", '<ESC>"+p<ESC>')
- 
+
 -- Press jk fast to exit insert mode 
 imap("jk", "<ESC>")
 imap("kj", "<ESC>")
+
+-- Start new line and jump down to it
+imap("<S-CR>", "<ESC>o");
 
 -- Visual --
 -- Copy and paste in visual mode
