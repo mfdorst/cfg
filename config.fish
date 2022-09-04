@@ -12,6 +12,7 @@ if status is-interactive
     abbr -ag cbr cargo build --release
     abbr -ag cr cargo run
     abbr -ag crr cargo run --release
+    abbr -ag ct cargo test
     
     ## Git
     abbr -ag g git
@@ -59,10 +60,7 @@ if status is-interactive
     abbr -ag cls "clear; printf '\e[3J'"
 
     ## Fluvio development
-    alias flub 'cargo build --manifest-path="$HOME/code/fluvio/Cargo.toml" --bin fluvio-run && cargo build --manifest-path="$HOME/code/fluvio/Cargo.toml" --bin fluvio'
     alias flu "$HOME/code/fluvio/target/debug/fluvio"
-    abbr -ag flubr 'flub && flu'
-    abbr -ag flud 'flub && flu cluster start --local --develop'
 
     # Environment Variables
     set -x EDITOR nvim
@@ -71,8 +69,13 @@ if status is-interactive
     # Zoxide
     zoxide init fish --cmd cd | source
     
+    # Cargo/Rust
     fish_add_path $HOME/.cargo/bin
+    # Fluvio
     fish_add_path $HOME/.fluvio/bin
+    # Rancher Desktop
+    fish_add_path $HOME/.rd/bin
+    # My custom scripts
     fish_add_path $HOME/scripts
 end
 
