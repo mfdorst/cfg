@@ -26,4 +26,11 @@ for _, server in pairs(servers) do
 		opts = vim.tbl_deep_extend("force", opts, server_custom_opts)
 	end
 	lspconfig[server].setup(opts)
+
+    if server == "rust_analyzer" then
+        require("user.keymap.rust-tools").map_keys()
+        require "user.lsp.rust-tools"
+
+    end
 end
+
