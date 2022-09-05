@@ -4,6 +4,17 @@ if not status_ok then
 end
 
 local opts = {
+    server = {
+        on_attach = require("user.lsp.handlers").on_attach,
+        capabilities = require("user.lsp.handlers").capabilities,
+        settings = {
+            ["rust-analyzer"] = {
+                checkOnSave = {
+                    command = "clippy"
+                }
+            }
+        }
+    },
     tools = { -- rust-tools options
 
         -- how to execute terminal commands
