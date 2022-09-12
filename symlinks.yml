@@ -51,6 +51,9 @@ links:
   - link:
     path: ~/.config/kitty/kitty.conf
     origin: kitty.conf
+  # - link:
+  #   path: ~/.config/kitty/kitty.conf
+  #   origin: kitty.conf.macos
   - link:
     path: ~/.config/fish/config.fish
     origin: config.fish
