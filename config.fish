@@ -67,15 +67,18 @@ if status is-interactive
     set -x DOCKER_HOST unix:///var/run/docker.sock
 
     # Zoxide
-    zoxide init fish --cmd cd | source
+    zoxide init fish --cmd j | source
     
     # Cargo/Rust
     fish_add_path $HOME/.cargo/bin
+    fish_add_path /usr/lib/cargo/bin
+    # My custom scripts
+    fish_add_path $HOME/scripts
+    # My custom executables
+    fish_add_path $HOME/.local/bin
     # Fluvio
     fish_add_path $HOME/.fluvio/bin
     # Rancher Desktop
     fish_add_path $HOME/.rd/bin
-    # My custom scripts
-    fish_add_path $HOME/scripts
 end
 
