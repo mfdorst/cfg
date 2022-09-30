@@ -60,6 +60,9 @@ links:
   - link:
     path: ~/.xmodmap
     origin: xmodmap
+  - link:
+    path: ~/.config/lvim/config.lua
+    origin: lvim-config.lua
   # - link:
   #   path: ~/.config/leftwm
   #   origin: leftwm
