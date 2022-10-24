@@ -80,6 +80,8 @@ if status is-interactive
     fish_add_path $HOME/scripts
     # My custom executables
     fish_add_path $HOME/.local/bin
+    # NPM
+    fish_add_path $HOME/.npm-global/bin
     # AppImages
     fish_add_path $HOME/appimg
     # Fluvio
