@@ -265,3 +265,5 @@ export NVM_DIR="$HOME/.nvm"
 # This should stay at the very end.
 eval "$(starship init zsh)"
 
+
+if [ -e /home/michael/.nix-profile/etc/profile.d/nix.sh ]; then . /home/michael/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

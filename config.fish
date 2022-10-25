@@ -1,6 +1,8 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
-    oh-my-posh init fish --config ~/.config/oh-my-posh/themes/gruvbox.toml | source
+    if type -q oh-my-posh
+        oh-my-posh init fish --config ~/.config/oh-my-posh/themes/gruvbox.toml | source
+    end
 
     # Don't display a greeting when the shell starts
     set -g fish_greeting ""
@@ -46,7 +48,7 @@ if status is-interactive
     end
 
     ## Exa
-    if command -v exa &> /dev/null
+    if type -q exa
         abbr -ag ls exa --git -l
         abbr -ag lsa exa --git -al
         abbr -ag lst exa --git -lTL2
@@ -67,15 +69,24 @@ if status is-interactive
     set -x DOCKER_HOST unix:///var/run/docker.sock
 
     # Zoxide
-    zoxide init fish --cmd cd | source
+    if type -q zoxide
+        zoxide init fish --cmd j | source
+    end
     
     # Cargo/Rust
     fish_add_path $HOME/.cargo/bin
+    fish_add_path /usr/lib/cargo/bin
+    # My custom scripts
+    fish_add_path $HOME/scripts
+    # My custom executables
+    fish_add_path $HOME/.local/bin
+    # NPM
+    fish_add_path $HOME/.npm-global/bin
+    # AppImages
+    fish_add_path $HOME/appimg
     # Fluvio
     fish_add_path $HOME/.fluvio/bin
     # Rancher Desktop
     fish_add_path $HOME/.rd/bin
-    # My custom scripts
-    fish_add_path $HOME/scripts
 end
 

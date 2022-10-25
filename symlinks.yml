@@ -51,12 +51,18 @@ links:
   - link:
     path: ~/.config/kitty/kitty.conf
     origin: kitty.conf
+  # - link:
+  #   path: ~/.config/kitty/kitty.conf
+  #   origin: kitty.conf.macos
   - link:
     path: ~/.config/fish/config.fish
     origin: config.fish
   - link:
     path: ~/.xmodmap
     origin: xmodmap
+  - link:
+    path: ~/.config/lvim/config.lua
+    origin: lvim-config.lua
   # - link:
   #   path: ~/.config/leftwm
   #   origin: leftwm

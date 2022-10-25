@@ -1,8 +1,5 @@
 font_family Fira Code
-font_size 12.0
-
-# Use server side decorations
-linux_display_server x11
+font_size 18.0
 
 # gruvbox-dark colorscheme for kitty
 # snazzy theme used as base
