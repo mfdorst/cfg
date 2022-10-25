@@ -40,7 +40,6 @@
     "terminal.external.linuxExec": "alacritty",
     "tabnine.experimentalAutoImports": true,
     "rust-analyzer.inlayHints.enable": false,
-    "workbench.colorTheme": "Sweet vscode",
     "workbench.iconTheme": "sweet-vscode-icons",
     "explorer.confirmDelete": false,
     "editor.inlayHints.enabled": false,
@@ -66,5 +65,6 @@
         "nu": {
             "path": "/usr/bin/nu"
         }
-    }
+    },
+    "workbench.colorTheme": "Gruvbox Dark Hard"
 }
