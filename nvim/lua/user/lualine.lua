@@ -52,21 +52,53 @@ local location = {
 local progress = function()
 	local current_line = vim.fn.line(".")
 	local total_lines = vim.fn.line("$")
-	local chars = { "__", "▁▁", "▂▂", "▃▃", "▄▄", "▅▅", "▆▆", "▇▇", "██" }
 	local line_ratio = current_line / total_lines
-	local index = math.ceil(line_ratio * #chars)
-	return chars[index]
+    return math.floor(line_ratio * 100).."%%"
 end
 
 local spaces = function()
 	return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
 end
 
+-- Theme
+
+local colors = {
+    black        = '#282828',
+    white        = '#ebdbb2',
+    red          = '#fb4934',
+    green        = '#b8bb26',
+    blue         = '#83a598',
+    orange       = '#d65d0e',
+    yellow       = '#d79921',
+    gray         = '#a89984',
+    darkgray     = '#3c3836',
+    lightgray    = '#504945',
+    inactivegray = '#7c6f64',
+}
+
+local gruvbox = require "lualine.themes.gruvbox_dark"
+
+gruvbox.normal = {
+    a = {bg = colors.orange, fg = colors.black, gui = 'bold'},
+    b = {bg = colors.lightgray, fg = colors.white},
+    c = {bg = colors.darkgray, fg = colors.gray}
+}
+gruvbox.insert = {
+    a = {bg = colors.yellow, fg = colors.black, gui = 'bold'},
+    b = {bg = colors.lightgray, fg = colors.white},
+    c = {bg = colors.darkgray, fg = colors.gray}
+}
+gruvbox.visual = {
+    a = {bg = colors.gray, fg = colors.black, gui = 'bold'},
+    b = {bg = colors.lightgray, fg = colors.white},
+    c = {bg = colors.darkgray, fg = colors.gray}
+}
+
 lualine.setup({
     -- Powerline symbols: 
 	options = {
 		icons_enabled = true,
-		theme = "auto",
+		theme = gruvbox,
         section_separators = { left = '', right = '' },
         component_separators = { left = '', right = '' },
 		disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline" },

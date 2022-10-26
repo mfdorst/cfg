@@ -47,6 +47,8 @@ nmap("<leader>fb", ":Telescope buffers<CR>")
 
 -- LSP
 nmap("<leader>rn", ":lua vim.lsp.buf.rename()<CR>")
+nmap("<leader>rs", ":LspRestart<CR>")
+nmap("<leader>rk", ":LspStop<CR>")
 
 -- Rust
 -- Save and run `cargo fmt`
